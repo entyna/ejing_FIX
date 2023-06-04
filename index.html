@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <!-- <script src="hide_address.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+  <title>e-jing</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+  <main>
+    <div id="sketch-container"></div>
+    <div class="yao"></div>
+    <nav class="action">
+      <div class="action__btns">
+        <div class="hex-buttons">
+        <button id="hexagram-previous">
+          <svg width="28" height="28" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.84182 3.13514C9.04327 3.32401 9.05348 3.64042 8.86462 3.84188L5.43521 7.49991L8.86462 11.1579C9.05348 11.3594 9.04327 11.6758 8.84182 11.8647C8.64036 12.0535 8.32394 12.0433 8.13508 11.8419L4.38508 7.84188C4.20477 7.64955 4.20477 7.35027 4.38508 7.15794L8.13508 3.15794C8.32394 2.95648 8.64036 2.94628 8.84182 3.13514Z"
+              fill="#FFF" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <button id="detail-open"></button>
+        <button id="hexagram-next">
+          <svg width="28" height="28" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+              fill="#FFF" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        </div>
+        <button id="info-box-open">
+          <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
+              fill="#FFF" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </main>
+  <dialog id="detail">
+    <div class="detail-elements">
+      <button id="detail-close"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m3 3 18 18m-18 0 18-18" fill="none" stroke="#fff" stroke-width="2"/></svg></button>
+      <div class="content"></div>
+    </div>
+  </dialog>
+  <dialog id="info-box">
+    <!-- <div class="info"> -->
+    <div class="info-elements">
+      <button id="info-box-close"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m3 3 18 18m-18 0 18-18" fill="none" stroke="#fff" stroke-width="2"/></svg></button>
+      <div class="info-cont">
+        <h1>e-jing</h1>
+        <p style="margin-top:30px;">Interaktivní diagram e-jing je vizualizací vztahů mezi jinovými a&nbsp;jangovými prvky ve znameních Knihy proměn (Yijing, také I-ťing). Zpřehledňuje sledování jevů, které jsou ztradičního zápisu hexagramu obtížně čitelné.</p>
+        <p>Je věnovám všem, kteří se chtějí v&nbsp;tichu a&nbsp;soukromí ponořit do hlubšího studia Knihy proměn, jedniček a&nbsp;nul a&nbsp;otisku větru na vodní hladině.</p>
+        <h2>Princip diagramu</h2>
+        <p>Diagram znázorňuje hexagramy, tedy kombinace šesti prvků, buď jinových nebo jangových.</p>
+        <p>Vrchní vrstvu tvoří graf, který kopíruje tradiční řadu přerušených a&nbsp;nepřerušených čar. Slouží jako ovládací prvek diagramu – po kliknutí na bod se jin změní v&nbsp;jang a&nbsp;naopak.</p>
+        <img src="/img/jinjang.png">
+        <p>Za vznikem druhé vrstvy stojí proces kombinování jinových a&nbsp;jangových prvků a&nbsp;sledování jejich vzájemného působení. Nejprve jsou prvky horního a&nbsp;dolního trigramu překříženy následujícím způsobem:</p>
+        <img src="/img/krizeni.png">
+        <p>Tím vzniká čtvercová síť mapující složení devíti dvojic prvků. Dvojice se může skládat ze dvou jinových, dvou jangových, nebo dvou různých prvků. Polím, kde se potkává jin i&nbsp;jang, je přiřazen směr pohybu, který probíhá vždy od jang k&nbsp;jin.</p>
+        <img src="/img/sit.png">
+        <p>Jedna z&nbsp;diagonál zachycuje tři nejčastěji sledované jevy hexagramu – vztah první čáry se čtvrtou, třetí s&nbsp;šestou a&nbsp;především druhé s&nbsp;pátou, který je pro čtení významu nejzásadnější. V jednom směru od diagonály leží pole, která vypovídají o&nbsp;vnitřní situaci (hlavně pole třetí a&nbsp;čtvrté čáry), v&nbsp;druhém směru jsou pole mapující vnější situaci (hlavně pole první a&nbsp;šesté čáry). Vnější pole jsou periferní i&nbsp;významově, proto byla čtvercová síť přetavena do následující středově souměrné podoby, která respektuje směr "uvnitř" (blízko středu) a&nbsp;"venku" (na okraji diagramu).</p>
+        <img src="/img/veletoc.png">
+        <p>Toto rozvržení polí je základem pro animovanou vizualizaci.</p>
+        <img src="/img/pole2.png">
+        <h2>Sledované jevy</h2>
+        <p>Čtení významu hexagramu je dovednost, která vyžaduje studium a&nbsp;cvik, a&nbsp;nejlepším průvodcem je kvalitní překlad Knihy proměn. Tento diagram neposkytuje k výkladu návod, ale může ho usnadnit poukázáním na několik sledovaných jevů.</p>
+        <h3>Trigramy</h3>
+        <p>Trigramové složení hexagramu lze číst z&nbsp;bodového grafu a&nbsp;jejich názvy jsou k&nbsp;dispozici po rozkliknutí detailu hexagramu.</p>
+        <h3>Nebe, Země, Člověk</h3>
+        <p>Základní prvek trigramu symbolicky náleží Zemi, prostřední Člověku a&nbsp;horní Nebi. Do polí diagramu se to promítá následovně:</p>
+        <img src="/img/pole1.png">
+        <h3>Komplementární hexagram</h3>
+        <p>Tradiční uspořádání hexagramů (posloupnost krále Wena) se skládá z&nbsp;32 dvojic hexagramů, navzájem opačných a&nbsp;zároveň se významově doplňujících. Většina dvojic vznikla převrácením hexagramů o&nbsp;180 stupňů. Pro souměrné hexagramy, které by se převrácením nezměnily, je komplementárním jejich opozitní hexagram. Posloupností krále Wena je možné procházet pomocí šipek.</p>
+        <h3>Opozitní hexagram</h3>
+        <p>Opozitní hexagram se získává proměnou všech prvků v&nbsp;jejich opak. Název opozitního hexagramu je uveden po rozkliknutí detailu.</p>
+        <h3>Korespondence</h3>
+        <p>Pro význam hexagramu jsou nejdůležitější korespondence první a&nbsp;čtvrté, třetí a&nbsp;šesté a&nbsp;druhé a&nbsp;páté čáry. V digramu se nacházejí na těchto pozicích:</p>
+        <img src="/img/koresp.png">
+        <h3>Korektní pozice</h3>
+        <p>Jangovým prvkům náleží lichá místa, jinovým sudá. Nejkorektnější a&nbsp;nejharmoničtější je proto následující rozvržení:</p>
+        <img src="/img/korekt.png">
+        <h2>K&nbsp;vizualitě a&nbsp;symbolice</h2>
+        <p>Tvar animovaného diagramu odpovídá výše popsaným polím. Čistě jinová pole jsou černá, prostupná a&nbsp;přijímací, poletující částice v nich zpomalí a&nbsp;vyčkávají jako semínko zasazené v&nbsp;zemi. Jangová pole jsou bílá a&nbsp;neprostupná, jejich zářivá energie blokuje částice v&nbsp;pohybu. V&nbsp;polích, kde se jin a&nbsp;jang setkávají, se rodí život a&nbsp;vzniká proces. Jsou průhledná, protože ani jeden prvek v&nbsp;něm disharmonicky nepřevládá. Částice v&nbsp;nich proudí buď nahoru nebo dolů.</p>
+        <p>Když dávní mudrci objevovali principy Proměn, dělali tak prostřednictvím pozorování krajiny a&nbsp;přírodních dějů. Proto je diagram trochu mapou, trochu krajinou. Občas hvězdným nebem, občas hřbety kaprů v&nbsp;jezírku, jindy mihotavou hladinou rýžových polí.</p>
+        <h2>K&nbsp;názvům hexagramů</h2>
+        <p>Diagram e-jing používá překlad názvů hexagramů a&nbsp;trigramů z&nbsp;českého překladu Knihy proměn od sinologa Oldřicha Krále (1996). Jen v&nbsp;jednom případě se odchyluje a&nbsp;pro hexagram 44 volí "Setkání" místo "Spojení", aby se žádný název neduplikoval, tak jako v knize. Zvolené slovo "Setkání" vychází z komentářů a&nbsp;významu hexagramu.</p>
+        <p style="margin-top: 50px">Tento projekt vznikl jako diplomová práce na&nbsp;FUD UJEP v&nbsp;ateliéru Vizuální design.</p>
+        <p>© Valentýna Kociánová, 2023</p>
+
+
+
+
+
+      </div>
+    <!-- </div> -->
+    </div>
+  </dialog>
+  <script src="sketch.js"></script>
+  <script src="particles.js"></script>
+  <script src="shine.js"></script>
+  <script src="fields.js"></script>
+  <script src="interaction.js"></script>
+</body>
+
+</html>
