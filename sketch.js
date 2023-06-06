@@ -55,9 +55,9 @@ function setup() {
   EM2 = new Field(pg, 0.7, 1, 3);
   EE = new Field(pg, 0.15, 0.85, 4);
 
-  shinyCirc1 = new Circle(cg, random(width), random(height));
-  shinyCirc2 = new Circle(cg, random(width), random(height));
-  shinyCirc3 = new Circle(cg, random(width), random(height));
+  shinyCirc1 = new Circle();
+  shinyCirc2 = new Circle();
+  shinyCirc3 = new Circle();
 }
 
 function draw() {
@@ -131,12 +131,6 @@ function shinyYang() {
     }
   }
   image(cg, 0, 0, width, height * 1.1);
-}
-
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  pg.resizeCanvas(windowWidth, windowHeight);
 }
 
 function fieldColor(valueA, valueB) {
@@ -239,3 +233,29 @@ function graphLine() {
   pop();
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  pg.resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight);
+  pg.resizeCanvas(windowWidth, windowHeight);
+  cg.resizeCanvas(windowWidth, windowHeight);
+  HH.resize(0.15, 0.85, 0);
+  MH1.resize(0, 0.3, 1);
+  HM.resize(0.3, 0.7, 1);
+  MH2.resize(0.7, 1, 1);
+  EH1.resize(- 0.3, 0.1, 2);
+  HE1.resize(0.1, 0.35, 2);
+  MM.resize(0.35, 0.65, 2);
+  HE2.resize(0.65, 0.9, 2);
+  EH2.resize(0.9, 1.3, 2);
+  EM1.resize(0, 0.3, 3);
+  ME.resize(0.3, 0.7, 3);
+  EM2.resize(0.7, 1, 3);
+  EE.resize(0.15, 0.85, 4);
+
+  shinyCirc1.resize();
+  shinyCirc2.resize();
+  shinyCirc3.resize();
+
+  redraw();
+}

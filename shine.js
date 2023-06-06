@@ -1,10 +1,16 @@
 class Circle {
   constructor(cg, startX, startY) {
-    this.x = startX;
-    this.y = startY;
-    this.diameter = 370;
+    this.calculateDimensions();
+    this.x = random(this.wholeWidth);
+    this.y = random(this.wholeHeight);
+    this.diameter = this.wholeHeight / 4;
     this.noiseX = random(1000);
     this.noiseY = random(1000);
+  }
+
+  calculateDimensions() {
+    this.wholeWidth = width;
+    this.wholeHeight = height;
   }
 
   move() {
@@ -33,5 +39,11 @@ class Circle {
   draw() {
     cg.fill(255, 50);
     cg.ellipse(this.x, this.y, this.diameter, this.diameter);
+  }
+
+  resize() {
+    this.calculateDimensions();
+    this.x = random(this.wholeWidth);
+    this.y = random(this.wholeHeight);
   }
 }
