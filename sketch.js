@@ -6,13 +6,14 @@ let shineX, shineY;
 let shineD = 150;
 let noiseX, noiseY;
 
+
 let points = [
-  [0, 0],
+  [1, 0],
   [0, 1],
-  [0, 2],
-  [0, 3],
+  [1, 2],
+  [1, 3],
   [0, 4],
-  [0, 5]
+  [1, 5]
 ];
 
 function updatePoints(yaoValues) {
@@ -29,18 +30,14 @@ function getPoints() {
 }
 
 function setup() {
-  var canvasDiv = document.getElementById('sketch-container');
-  var divHeight = canvasDiv.offsetHeight;
-  var canvas = createCanvas(windowWidth, divHeight);
-  canvas.parent('sketch-container');
-  // createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight);
   pg = createGraphics(width, height);
   cg = createGraphics(width, height);
   cg.pixelDensity(0.01);
   background(0);
 
   frameRate(30);
-
+ 
   HH = new Field(pg, 0.15, 0.85, 0);
   MH1 = new Field(pg, 0, 0.3, 1);
   HM = new Field(pg, 0.3, 0.7, 1);
@@ -55,9 +52,9 @@ function setup() {
   EM2 = new Field(pg, 0.7, 1, 3);
   EE = new Field(pg, 0.15, 0.85, 4);
 
-  shinyCirc1 = new Circle(cg, random(width), random(height));
-  shinyCirc2 = new Circle(cg, random(width), random(height));
-  shinyCirc3 = new Circle(cg, random(width), random(height));
+  shinyCirc1 = new Circle();
+  shinyCirc2 = new Circle();
+  shinyCirc3 = new Circle();
 }
 
 function draw() {
@@ -68,11 +65,6 @@ function draw() {
   // FIELDS  
   pg.clear();
   pgFields();
-  pg.noFill();
-  pg.stroke('blue');
-  pg.strokeWeight(6);
-  pg.rect(0, 0, pg.width, pg.height)
-  pg.circle(pg.width/2, pg.height/2, width/3);
   image(pg, 0, 0);
 
   // PARTICLES
@@ -110,10 +102,7 @@ function shinyYang() {
   cg.noStroke();
   let noiseVal = noise(frameCount * 0.005);
   diameter = map(noiseVal, 0, 1, 10, 60);
-  // d2 = map(noiseVal, 0, 1, 0.2, 0.7);
-  // cg.fill(200);
-  // cg.ellipse(width / 2, height / 2, width * d2, height * d2);
-  // cg.ellipse(50, -50, width * d2, height * d2);
+
   shinyCirc1.draw();
   shinyCirc1.move();
   shinyCirc2.draw();
@@ -133,12 +122,6 @@ function shinyYang() {
   image(cg, 0, 0, width, height * 1.1);
 }
 
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  pg.resizeCanvas(windowWidth, windowHeight);
-}
-
 function fieldColor(valueA, valueB) {
   if (valueA === 0 && valueB === 0) {
     return 0;
@@ -155,7 +138,7 @@ function fieldOpacity(valueA, valueB) {
   if (valueA === 0 && valueB === 0) {
     return 255;
   } else if (valueA === 1 && valueB === 1) {
-    return 50;
+    return 70;
   } else if (valueA === 1 && valueB === 0) {
     return 3;
   } else if (valueA === 0 && valueB === 1) {
@@ -165,7 +148,7 @@ function fieldOpacity(valueA, valueB) {
 
 function pgFields() {
   let fieldStroke = 100;
-  let fieldWeight = 0.3;
+  let fieldWeight = 0.7;
 
   pg.stroke(fieldStroke);
   pg.strokeWeight(fieldWeight);
@@ -228,7 +211,7 @@ function graphLine() {
   push();
   stroke(255);
   fill(0)
-  strokeWeight(1);
+  strokeWeight(1.4);
   for (let i = 0; i < points.length - 1; i++) {
     let startX = points[i][0] * xScale + xShift;
     let startY = height - points[i][1] * yScale - yShift;
@@ -239,3 +222,27 @@ function graphLine() {
   pop();
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  pg.resizeCanvas(windowWidth, windowHeight);
+  cg.resizeCanvas(windowWidth, windowHeight);
+  HH.resize(0.15, 0.85, 0);
+  MH1.resize(0, 0.3, 1);
+  HM.resize(0.3, 0.7, 1);
+  MH2.resize(0.7, 1, 1);
+  EH1.resize(- 0.3, 0.1, 2);
+  HE1.resize(0.1, 0.35, 2);
+  MM.resize(0.35, 0.65, 2);
+  HE2.resize(0.65, 0.9, 2);
+  EH2.resize(0.9, 1.3, 2);
+  EM1.resize(0, 0.3, 3);
+  ME.resize(0.3, 0.7, 3);
+  EM2.resize(0.7, 1, 3);
+  EE.resize(0.15, 0.85, 4);
+
+  shinyCirc1.resize();
+  shinyCirc2.resize();
+  shinyCirc3.resize();
+
+  redraw();
+}
