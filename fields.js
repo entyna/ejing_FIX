@@ -1,7 +1,8 @@
 class Field {
   constructor(pg, x1, x2, y1) {
     this.pg = pg;
-    this.calculateDimensions();
+    this.width = width;
+    this.height = height;
     this.xpos1 = this.width * x1;
     this.xpos2 = this.width * x2;
     this.xoff = this.width * 0.3;
@@ -9,11 +10,6 @@ class Field {
     this.yoff = this.height / 6;
     this.ypos = hMarg + this.yoff * y1;
     this.grain = 3;
-  }
-
-  calculateDimensions() {
-    this.width = width;
-    this.height = height;
   }
   
   show() {
@@ -35,16 +31,6 @@ class Field {
     
     this.pg.vertex(this.xpos2, this.ypos);
     this.pg.endShape(CLOSE);
-  }
-
-  resize(x1, x2, y1) {
-    this.calculateDimensions();
-    this.xpos1 = this.width * x1;
-    this.xpos2 = this.width * x2;
-    this.xoff = this.width * 0.3;
-    let hMarg = this.height / 18;
-    this.yoff = this.height / 6;
-    this.ypos = hMarg + this.yoff * y1;
   }
   
 }

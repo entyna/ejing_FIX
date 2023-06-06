@@ -14,8 +14,8 @@ class Particle {
       this.acc = createVector();
       this.maxSpeed = 3;
       this.yinSpeed = 0.1;
-      this.size = random(1.5, 3);
-      this.strokeThick = 0.7;
+      this.size = random(1, 2.5);
+      this.strokeThick = 0.4;
       this.strokeCol = 250;
       this.fillCol = 0;
       this.lifeSpan = random(200, 300);
