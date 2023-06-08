@@ -22,6 +22,8 @@ const data = [
     "komplname": "Přijetí",
     "opnum": "2",
     "opname": "Přijetí",
+    "komplbin": "000000",
+    "opbin": "000000",
     "moudro": "heh."
   },
   {
@@ -35,6 +37,8 @@ const data = [
     "komplname": "Tvoření",
     "opnum": "1",
     "opname": "Tvoření",
+    "komplbin": "111111",
+    "opbin": "111111",
     "moudro": "hehheh."
   },
   {
@@ -48,6 +52,8 @@ const data = [
     "komplname": "Zrání",
     "opnum": "50",
     "opname": "Založení nového",
+    "komplbin": "010001",
+    "opbin": "011101",
     "moudro": "heh."
   },
   {
@@ -61,6 +67,8 @@ const data = [
     "komplname": "Rození",
     "opnum": "49",
     "opname": "Převrat",
+    "komplbin": "100010",
+    "opbin": "101110",
     "moudro": "hehheh."
   },
   {
@@ -74,6 +82,8 @@ const data = [
     "komplname": "Svár",
     "opnum": "35",
     "opname": "Pokrok",
+    "komplbin": "010111",
+    "opbin": "000101",
     "moudro": "heh."
   },
   {
@@ -87,6 +97,8 @@ const data = [
     "komplname": "Očekávání",
     "opnum": "36",
     "opname": "Soumrak",
+    "komplbin": "111010",
+    "opbin": "101000",
     "moudro": "hehheh."
   },
   {
@@ -100,6 +112,8 @@ const data = [
     "komplname": "Spojení",
     "opnum": "13",
     "opname": "Lidské společenství",
+    "komplbin": "000010",
+    "opbin": "101111",
     "moudro": "heh."
   },
   {
@@ -113,6 +127,8 @@ const data = [
     "komplname": "Vojsko",
     "opnum": "14",
     "opname": "Veliké držení",
+    "komplbin": "010000",
+    "opbin": "111101",
     "moudro": "hehheh."
   },
   {
@@ -126,6 +142,8 @@ const data = [
     "komplname": "Vykročení",
     "opnum": "16",
     "opname": "Nadšení",
+    "komplbin": "110111",
+    "opbin": "000100",
     "moudro": "heh."
   },
   {
@@ -139,6 +157,8 @@ const data = [
     "komplname": "Podrobení malého",
     "opnum": "15",
     "opname": "Skromnost",
+    "komplbin": "111011",
+    "opbin": "001000",
     "moudro": "hehheh."
   },
   {
@@ -152,6 +172,8 @@ const data = [
     "komplname": "Úpadek",
     "opnum": "12",
     "opname": "Úpadek",
+    "komplbin": "000111",
+    "opbin": "000111",
     "moudro": "heh."
   },
   {
@@ -165,6 +187,8 @@ const data = [
     "komplname": "Prosperita",
     "opnum": "11",
     "opname": "Prosperita",
+    "komplbin": "111000",
+    "opbin": "111000",
     "moudro": "hehheh."
   },
   {
@@ -178,6 +202,8 @@ const data = [
     "komplname": "Veliké držení",
     "opnum": "7",
     "opname": "Vojsko",
+    "komplbin": "111101",
+    "opbin": "010000",
     "moudro": "heh."
   },
   {
@@ -191,6 +217,8 @@ const data = [
     "komplname": "Lidské společenství",
     "opnum": "8",
     "opname": "Spojení",
+    "komplbin": "101111",
+    "opbin": "000010",
     "moudro": "hehheh."
   },
   {
@@ -202,8 +230,10 @@ const data = [
     "lower": "hora",
     "komplnum": "16",
     "komplname": "Nadšení",
-    "opnum": "9",
-    "opname": "Podrobení malého",
+    "opnum": "10",
+    "opname": "Vykročení",
+    "komplbin": "000100",
+    "opbin": "110111",
     "moudro": "heh."
   },
   {
@@ -217,6 +247,8 @@ const data = [
     "komplname": "Skromnost",
     "opnum": "9",
     "opname": "Podrobení malého",
+    "komplbin": "001000",
+    "opbin": "111011",
     "moudro": "hehheh."
   },
   {
@@ -230,6 +262,8 @@ const data = [
     "komplname": "Zkaženost",
     "opnum": "18",
     "opname": "Zkaženost",
+    "komplbin": "011001",
+    "opbin": "011001",
     "moudro": "heh."
   },
   {
@@ -243,6 +277,8 @@ const data = [
     "komplname": "Následování",
     "opnum": "17",
     "opname": "Následování",
+    "komplbin": "100110",
+    "opbin": "100110",
     "moudro": "hehheh."
   },
   {
@@ -256,6 +292,8 @@ const data = [
     "komplname": "Pozorování",
     "opnum": "33",
     "opname": "Ústup",
+    "komplbin": "000011",
+    "opbin": "001111",
     "moudro": "heh."
   },
   {
@@ -269,6 +307,8 @@ const data = [
     "komplname": "Sblížení",
     "opnum": "34",
     "opname": "Síla velkého",
+    "komplbin": "110000",
+    "opbin": "111100",
     "moudro": "hehheh."
   },
   {
@@ -282,6 +322,8 @@ const data = [
     "komplname": "Půvab",
     "opnum": "48",
     "opname": "Studna",
+    "komplbin": "101001",
+    "opbin": "011010",
     "moudro": "heh."
   },
   {
@@ -295,6 +337,8 @@ const data = [
     "komplname": "Skousnutí",
     "opnum": "47",
     "opname": "Tíseň",
+    "komplbin": "100101",
+    "opbin": "010110",
     "moudro": "hehheh."
   },
   {
@@ -308,6 +352,8 @@ const data = [
     "komplname": "Návraty",
     "opnum": "43",
     "opname": "Rozhodnost",
+    "komplbin": "100000",
+    "opbin": "111110",
     "moudro": "heh."
   },
   {
@@ -321,6 +367,8 @@ const data = [
     "komplname": "Odpadání",
     "opnum": "44",
     "opname": "Setkání",
+    "komplbin": "000001",
+    "opbin": "011111",
     "moudro": "hehheh."
   },
   {
@@ -334,6 +382,8 @@ const data = [
     "komplname": "Podrobení velkého",
     "opnum": "46",
     "opname": "Stoupání",
+    "komplbin": "111001",
+    "opbin": "011000",
     "moudro": "heh."
   },
   {
@@ -347,6 +397,8 @@ const data = [
     "komplname": "Nevinnost",
     "opnum": "45",
     "opname": "Shromáždění",
+    "komplbin": "100111",
+    "opbin": "000110",
     "moudro": "hehheh."
   },
   {
@@ -360,6 +412,8 @@ const data = [
     "komplname": "Převaha velkého",
     "opnum": "28",
     "opname": "Převaha velkého",
+    "komplbin": "011110",
+    "opbin": "011110",
     "moudro": "heh."
   },
   {
@@ -373,6 +427,8 @@ const data = [
     "komplname": "Čelisti",
     "opnum": "27",
     "opname": "Čelisti",
+    "komplbin": "100001",
+    "opbin": "100001",
     "moudro": "hehheh."
   },
   {
@@ -386,6 +442,8 @@ const data = [
     "komplname": "Záření",
     "opnum": "30",
     "opname": "Záření",
+    "komplbin": "101101",
+    "opbin": "101101",
     "moudro": "heh."
   },
   {
@@ -399,6 +457,8 @@ const data = [
     "komplname": "Propadání",
     "opnum": "29",
     "opname": "Propadání",
+    "komplbin": "010010",
+    "opbin": "010010",
     "moudro": "hehheh."
   },
   {
@@ -412,6 +472,8 @@ const data = [
     "komplname": "Trvání",
     "opnum": "41",
     "opname": "Ubývání",
+    "komplbin": "011100",
+    "opbin": "110001",
     "moudro": "heh."
   },
   {
@@ -425,6 +487,8 @@ const data = [
     "komplname": "Přitažlivost",
     "opnum": "42",
     "opname": "Přidání",
+    "komplbin": "001110",
+    "opbin": "100011",
     "moudro": "hehheh."
   },
   {
@@ -438,6 +502,8 @@ const data = [
     "komplname": "Síla velkého",
     "opnum": "19",
     "opname": "Sblížení",
+    "komplbin": "111100",
+    "opbin": "110000",
     "moudro": "heh."
   },
   {
@@ -451,6 +517,8 @@ const data = [
     "komplname": "Ústup",
     "opnum": "20",
     "opname": "Pozorování",
+    "komplbin": "001111",
+    "opbin": "000011",
     "moudro": "hehheh."
   },
   {
@@ -464,6 +532,8 @@ const data = [
     "komplname": "Soumrak",
     "opnum": "5",
     "opname": "Očekávání",
+    "komplbin": "101000",
+    "opbin": "111010",
     "moudro": "heh."
   },
   {
@@ -477,6 +547,8 @@ const data = [
     "komplname": "Pokrok",
     "opnum": "6",
     "opname": "Svár",
+    "komplbin": "000101",
+    "opbin": "010111",
     "moudro": "hehheh."
   },
   {
@@ -490,6 +562,8 @@ const data = [
     "komplname": "Vzdálení",
     "opnum": "40",
     "opname": "Uvolnění",
+    "komplbin": "110101",
+    "opbin": "010100",
     "moudro": "heh."
   },
   {
@@ -503,6 +577,8 @@ const data = [
     "komplname": "Rodina",
     "opnum": "39",
     "opname": "Překážka",
+    "komplbin": "101011",
+    "opbin": "001010",
     "moudro": "hehheh."
   },
   {
@@ -516,6 +592,8 @@ const data = [
     "komplname": "Uvolnění",
     "opnum": "38",
     "opname": "Vzdálení",
+    "komplbin": "010100",
+    "opbin": "110101",
     "moudro": "heh."
   },
   {
@@ -529,6 +607,8 @@ const data = [
     "komplname": "Překážka",
     "opnum": "37",
     "opname": "Rodina",
+    "komplbin": "001010",
+    "opbin": "101011",
     "moudro": "hehheh."
   },
   {
@@ -542,6 +622,8 @@ const data = [
     "komplname": "Přidání",
     "opnum": "31",
     "opname": "Přitažlivost",
+    "komplbin": "100011",
+    "opbin": "001110",
     "moudro": "heh."
   },
   {
@@ -555,6 +637,8 @@ const data = [
     "komplname": "Ubývání",
     "opnum": "32",
     "opname": "Trvání",
+    "komplbin": "110001",
+    "opbin": "011100",
     "moudro": "hehheh."
   },
   {
@@ -568,6 +652,8 @@ const data = [
     "komplname": "Setkání",
     "opnum": "23",
     "opname": "Odpadání",
+    "komplbin": "011111",
+    "opbin": "000001",
     "moudro": "heh."
   },
   {
@@ -581,6 +667,8 @@ const data = [
     "komplname": "Rozhodnost",
     "opnum": "24",
     "opname": "Návraty",
+    "komplbin": "111110",
+    "opbin": "100000",
     "moudro": "hehheh."
   },
   {
@@ -594,6 +682,8 @@ const data = [
     "komplname": "Stoupání",
     "opnum": "26",
     "opname": "Podrobení velkého",
+    "komplbin": "011000",
+    "opbin": "111001",
     "moudro": "heh."
   },
   {
@@ -607,6 +697,8 @@ const data = [
     "komplname": "Shromáždění",
     "opnum": "25",
     "opname": "Nevinnost",
+    "komplbin": "000110",
+    "opbin": "100111",
     "moudro": "hehheh."
   },
   {
@@ -620,6 +712,8 @@ const data = [
     "komplname": "Studna",
     "opnum": "22",
     "opname": "Půvab",
+    "komplbin": "011010",
+    "opbin": "101001",
     "moudro": "heh."
   },
   {
@@ -633,6 +727,8 @@ const data = [
     "komplname": "Tíseň",
     "opnum": "21",
     "opname": "Skousnutí",
+    "komplbin": "010110",
+    "opbin": "100101",
     "moudro": "hehheh."
   },
   {
@@ -646,6 +742,8 @@ const data = [
     "komplname": "Založení nového",
     "opnum": "4",
     "opname": "Zrání",
+    "komplbin": "011101",
+    "opbin": "010001",
     "moudro": "hehheh."
   },
   {
@@ -659,6 +757,8 @@ const data = [
     "komplname": "Převrat",
     "opnum": "3",
     "opname": "Rození",
+    "komplbin": "101110",
+    "opbin": "100010",
     "moudro": "heh."
   },
   {
@@ -672,6 +772,8 @@ const data = [
     "komplname": "Stání",
     "opnum": "57",
     "opname": "Pronikání",
+    "komplbin": "001001",
+    "opbin": "011011",
     "moudro": "hehheh."
   },
   {
@@ -685,6 +787,8 @@ const data = [
     "komplname": "Bouře",
     "opnum": "58",
     "opname": "Radost",
+    "komplbin": "100100",
+    "opbin": "110110",
     "moudro": "heh."
   },
   {
@@ -698,6 +802,8 @@ const data = [
     "komplname": "Provdání",
     "opnum": "54",
     "opname": "Provdání",
+    "komplbin": "110100",
+    "opbin": "110100",
     "moudro": "hehheh."
   },
   {
@@ -711,6 +817,8 @@ const data = [
     "komplname": "Plynutí",
     "opnum": "53",
     "opname": "Plynutí",
+    "komplbin": "001011",
+    "opbin": "001011",
     "moudro": "heh."
   },
   {
@@ -724,6 +832,8 @@ const data = [
     "komplname": "Putování",
     "opnum": "59",
     "opname": "Odloučení",
+    "komplbin": "001101",
+    "opbin": "010011",
     "moudro": "hehheh."
   },
   {
@@ -737,6 +847,8 @@ const data = [
     "komplname": "Hojnost",
     "opnum": "60",
     "opname": "Omezení",
+    "komplbin": "101100",
+    "opbin": "110010",
     "moudro": "heh."
   },
   {
@@ -750,6 +862,8 @@ const data = [
     "komplname": "Radost",
     "opnum": "51",
     "opname": "Bouře",
+    "komplbin": "110110",
+    "opbin": "100100",
     "moudro": "hehheh."
   },
   {
@@ -763,6 +877,8 @@ const data = [
     "komplname": "Pronikání",
     "opnum": "52",
     "opname": "Stání",
+    "komplbin": "011011",
+    "opbin": "001001",
     "moudro": "heh."
   },
   {
@@ -776,6 +892,8 @@ const data = [
     "komplname": "Omezení",
     "opnum": "55",
     "opname": "Hojnost",
+    "komplbin": "110010",
+    "opbin": "101100",
     "moudro": "hehheh."
   },
   {
@@ -789,6 +907,8 @@ const data = [
     "komplname": "Odloučení",
     "opnum": "56",
     "opname": "Putování",
+    "komplbin": "010011",
+    "opbin": "001101",
     "moudro": "heh."
   },
   {
@@ -802,6 +922,8 @@ const data = [
     "komplname": "Převaha malého",
     "opnum": "62",
     "opname": "Převaha malého",
+    "komplbin": "001100",
+    "opbin": "001100",
     "moudro": "hehheh."
   },
   {
@@ -815,6 +937,8 @@ const data = [
     "komplname": "Vnitřní opravdovost",
     "opnum": "61",
     "opname": "Vnitřní opravdovost",
+    "komplbin": "110011",
+    "opbin": "110011",
     "moudro": "heh."
   },
   {
@@ -828,6 +952,8 @@ const data = [
     "komplname": "Nedokončení",
     "opnum": "64",
     "opname": "Nedokončení",
+    "komplbin": "010101",
+    "opbin": "010101",
     "moudro": "hehheh."
   },
   {
@@ -841,6 +967,8 @@ const data = [
     "komplname": "Ukončení",
     "opnum": "63",
     "opname": "Ukončení",
+    "komplbin": "101010",
+    "opbin": "101010",
     "moudro": "heh."
   }
 ]
