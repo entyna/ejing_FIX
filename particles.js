@@ -15,13 +15,13 @@ class Particle {
       this.maxSpeed = 3;
       this.yinSpeed = 0.1;
       this.size = random(1, 2.5);
-      this.strokeThick = 0.4;
-      this.strokeCol = 250;
+      this.strokeThick = 0.7;
+      this.strokeCol = 245;
       this.fillCol = 0;
       this.lifeSpan = random(200, 300);
       this.isStopped = false;
       this.history = [];
-      this.historyLength = 50;
+      this.historyLength = 30;
 
     this.yinAngle = random(TWO_PI);
     }
