@@ -29,11 +29,8 @@ function getPoints() {
 }
 
 function setup() {
-  var canvasDiv = document.getElementById('sketch-container');
-  var divHeight = canvasDiv.offsetHeight;
-  var canvas = createCanvas(windowWidth, divHeight);
+  var canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-container');
-  // createCanvas(windowWidth, windowHeight);
   pg = createGraphics(width, height);
   cg = createGraphics(width, height);
   cg.pixelDensity(0.01);
@@ -68,11 +65,7 @@ function draw() {
   // FIELDS  
   pg.clear();
   pgFields();
-  pg.noFill();
-  pg.stroke('blue');
-  pg.strokeWeight(6);
-  pg.rect(0, 0, pg.width, pg.height)
-  pg.circle(pg.width/2, pg.height/2, width/3);
+
   image(pg, 0, 0);
 
   // PARTICLES
@@ -110,10 +103,7 @@ function shinyYang() {
   cg.noStroke();
   let noiseVal = noise(frameCount * 0.005);
   diameter = map(noiseVal, 0, 1, 10, 60);
-  // d2 = map(noiseVal, 0, 1, 0.2, 0.7);
-  // cg.fill(200);
-  // cg.ellipse(width / 2, height / 2, width * d2, height * d2);
-  // cg.ellipse(50, -50, width * d2, height * d2);
+
   shinyCirc1.draw();
   shinyCirc1.move();
   shinyCirc2.draw();
